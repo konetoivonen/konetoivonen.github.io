@@ -7,3 +7,4 @@ Täältä löytyvät tehtäväpalautukset:
 - [Viikko 5](vko5)
 - [Viikko 6](vko6)
 - [Harjoitustyö](lopputyö)
+- [Movierecommender](movierecommender)
