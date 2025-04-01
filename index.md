@@ -50,6 +50,7 @@ Tällä komennolla voimme kulkea pitkin orja-koneen puita tutkien sen eri kirjas
 
 ![image](https://github.com/user-attachments/assets/a11844cd-8e47-46df-a7ea-9e538b1afd19)
 
+Tämä on esimerkki idempotentista.
 # Lisäys:
 
 Tutkiessani saltin käyttöä suositeltiin, että lokaalisti ajattaessa kannattaa lisätä "state.single" ennen komentoa, sillä silloin Salt ohittaa SLS-tiedoston luonnin ja ajamisen, kuljettaen komennot suoraan orja-koneelle. Näin ainakin Internet ja oma kokemus minulle opettivat, joka tietenkin helpottaa kyseisiä testejä.
