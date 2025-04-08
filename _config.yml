@@ -6,7 +6,7 @@ plugins:
 - jekyll-remote-theme
 
 header_pages:
-- h0
+- h1
 
 twitter_username: konetoivonen
 github_username: konetoivonen
