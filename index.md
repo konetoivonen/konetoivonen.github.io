@@ -1,7 +1,7 @@
 ## Tervetuloa GitHub Pages-sivustolleni!
 Täältä löytyvät tehtäväpalautukset:
 
- - (H1)[h1.md]
+ - [h1](h1.md)
 
 ## H1
 
