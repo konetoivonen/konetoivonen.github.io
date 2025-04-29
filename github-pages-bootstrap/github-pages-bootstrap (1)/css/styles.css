@@ -1,0 +1,82 @@
+/* Custom styles for the responsive Bootstrap site */
+
+/* Hero section styles */
+.hero {
+  padding: 80px 0;
+  background-color: #0d6efd;
+  background-image: linear-gradient(135deg, #0d6efd 0%, #0dcaf0 100%);
+}
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Card hover effects */
+.card {
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Custom spacing */
+section {
+  padding: 60px 0;
+}
+
+/* Carousel customization */
+.carousel-item {
+  height: 400px;
+}
+
+.carousel-item img {
+  object-fit: cover;
+  height: 100%;
+}
+
+/* Accordion customization */
+.accordion-button:not(.collapsed) {
+  background-color: rgba(13, 110, 253, 0.1);
+  color: #0d6efd;
+}
+
+.accordion-button:focus {
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+/* Table customization */
+.table {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero {
+    padding: 60px 0;
+  }
+
+  h1.display-4 {
+    font-size: 2.5rem;
+  }
+
+  .carousel-item {
+    height: 300px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero {
+    padding: 40px 0;
+  }
+
+  h1.display-4 {
+    font-size: 2rem;
+  }
+
+  .carousel-item {
+    height: 200px;
+  }
+}
