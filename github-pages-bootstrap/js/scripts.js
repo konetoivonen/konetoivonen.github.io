@@ -2,18 +2,57 @@
 
 // Wait for the document to be fully loaded
 document.addEventListener("DOMContentLoaded", () => {
+  // Initialize tooltips
+  const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+  tooltipTriggerList.map((tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl))
+
   // Smooth scrolling for anchor links
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
       e.preventDefault()
 
       const targetId = this.getAttribute("href")
+      if (targetId === "#") return
+
       const targetElement = document.querySelector(targetId)
 
       if (targetElement) {
+        // Get the height of the navbar
+        const navbarHeight = document.querySelector(".navbar").offsetHeight
+
         window.scrollTo({
-          top: targetElement.offsetTop - 70, // Offset for fixed navbar
+          top: targetElement.offsetTop - navbarHeight, // Offset for fixed navbar
           behavior: "smooth",
+        })
+
+        // Update active nav link
+        document.querySelectorAll(".navbar .nav-link").forEach((link) => {
+          link.classList.remove("active")
+        })
+        this.classList.add("active")
+      }
+    })
+  })
+
+  // Update active nav link on scroll
+  window.addEventListener("scroll", () => {
+    const scrollPosition = window.scrollY + 100 // Add offset
+    const navbarHeight = document.querySelector(".navbar").offsetHeight
+
+    // Get all sections
+    const sections = document.querySelectorAll("section, header")
+
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop - navbarHeight
+      const sectionHeight = section.offsetHeight
+      const sectionId = section.getAttribute("id")
+
+      if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+        document.querySelectorAll(".navbar .nav-link").forEach((link) => {
+          link.classList.remove("active")
+          if (link.getAttribute("href") === `#${sectionId}`) {
+            link.classList.add("active")
+          }
         })
       }
     })
@@ -31,6 +70,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Reset the form
       this.reset()
+    })
+  }
+
+  // Initialize carousel with custom options
+  const mainCarousel = document.getElementById("mainCarousel")
+  if (mainCarousel) {
+    const carousel = new bootstrap.Carousel(mainCarousel, {
+      interval: 5000,
+      wrap: true,
+      touch: true,
     })
   }
 })
