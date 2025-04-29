@@ -2,4 +2,4 @@
 Täältä löytyvät tehtäväpalautukset:
 
  - [JSON](dist)
- - [Bootstrap](github-pages.bootstrap)
+ - [Bootstrap](github-pages-bootstrap)
