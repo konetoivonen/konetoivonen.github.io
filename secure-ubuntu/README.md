@@ -1,7 +1,5 @@
 # Secure Ubuntu - Hardening Automation
 
-![Screenshot](screenshot.png)
-
 ## Purpose
 Automates the security hardening of a fresh Ubuntu server using SaltStack. Disables root login, enables firewall, removes risky packages, and sets up a secure user.
 
@@ -9,7 +7,7 @@ Automates the security hardening of a fresh Ubuntu server using SaltStack. Disab
 GNU General Public License v3.0
 
 ## Author
-Your Name or Nickname – [Your optional homepage]
+Konsta Toivonen – [konetoivonen.github.io]
 
 ## Install
 ```bash
