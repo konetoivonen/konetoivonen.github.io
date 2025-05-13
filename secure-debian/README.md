@@ -23,6 +23,8 @@ A Vagrant-based test environment is used for development, consisting of one mast
 
 - [Vagrant](https://developer.hashicorp.com/vagrant)
 
+-  [Project files](https://github.com/konetoivonen/konetoivonen.github.io/tree/main/secure-ubuntu/salt)
+
 ## License
 This project is licensed under the GNU General Public License v3.0.
 
