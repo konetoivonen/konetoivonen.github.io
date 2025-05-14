@@ -11,7 +11,7 @@ SecureDebian is a SaltStack-based configuration management project designed to h
       - Enables UFW
       - Creates a secure user, and adds a warning message (MOTD).
   
-The implementation uses SaltStack instead of standalone shell scripts.
+The implementation uses SaltStack instead of standalone shell scripts, as was required by the assignment.
 A Vagrant-based test environment is used for development, consisting of one master and two minions.
 
 
