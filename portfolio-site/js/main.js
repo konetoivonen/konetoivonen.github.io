@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Smooth scrolling for navigation links
+  // Sulava skrollaaminen ilman turhaa lataamista
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
       e.preventDefault()
@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
           behavior: "smooth",
         })
 
-        // Update active nav link
+        // Päivitä aktiivinen Nav-linkki
         document.querySelectorAll(".nav-link").forEach((navLink) => {
           navLink.classList.remove("active")
         })
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
     })
   })
 
-  // Update active nav link on scroll
+  // Kun skrollaus alkaa, päivitä Nav-linkki
   window.addEventListener("scroll", () => {
     const scrollPosition = window.scrollY
 
@@ -42,15 +42,14 @@ document.addEventListener("DOMContentLoaded", () => {
     })
   })
 
-  // Fetch GitHub repositories
+  // Hae GitHub-repot
   fetchGitHubRepos()
 })
 
-// Function to fetch GitHub repositories
+// GitHub-repo funktio
 function fetchGitHubRepos() {
-  // Replace 'username' with a GitHub username or use a demo username
-  const username = "octocat"
-  const apiUrl = `https://api.github.com/users/${username}/repos?sort=updated&per_page=6`
+  const username = "konetoivonen"
+  const apiUrl = `https://api.github.com/users/${konetoivonen}/repos?sort=updated&per_page=6`
 
   fetch(apiUrl)
     .then((response) => {
@@ -74,7 +73,7 @@ function fetchGitHubRepos() {
     })
 }
 
-// Function to display GitHub repositories
+// Näytä GitHub-repot
 function displayRepos(repos) {
   const reposContainer = document.getElementById("github-repos")
 
@@ -92,7 +91,7 @@ function displayRepos(repos) {
   let reposHTML = ""
 
   repos.forEach((repo) => {
-    // Generate a random color for the language indicator
+    // Random-värejä
     const languageColor = getLanguageColor(repo.language)
 
     reposHTML += `
@@ -125,7 +124,7 @@ function displayRepos(repos) {
   reposContainer.innerHTML = reposHTML
 }
 
-// Function to get a color for a programming language
+// Funktio värin saamiselle per koodikieli
 function getLanguageColor(language) {
   const colors = {
     JavaScript: "#f1e05a",
