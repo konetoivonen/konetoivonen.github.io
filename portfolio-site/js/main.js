@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // GitHub-repo funktio
 function fetchGitHubRepos() {
   const username = "konetoivonen"
-  const apiUrl = `https://api.github.com/users/${konetoivonen}/repos?sort=updated&per_page=6`
+  const apiUrl = `https://api.github.com/users/${username}/repos?sort=updated&per_page=6`
 
   fetch(apiUrl)
     .then((response) => {
